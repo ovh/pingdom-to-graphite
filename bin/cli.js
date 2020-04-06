@@ -90,7 +90,7 @@ async function getConfig(configurationFile) {
       try {
         const config = await getConfig(cmd.config);
         const p2g = new P2G(config);
-        await p2g.update({ summary: !!program.summary });
+        await p2g.update({ summary: !!cmd.summary });
       } catch (e) {
         logger.error(e);
         process.exit(1);
