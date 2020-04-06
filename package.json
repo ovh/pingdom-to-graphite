@@ -1,0 +1,37 @@
+{
+  "name": "pingdom-to-graphite",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A tool for copying metrics from Pingdom to Graphite.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ovh/pingdom-to-graphite.git"
+  },
+  "license": "BSD-3-Clause",
+  "author": "OVH SAS",
+  "bin": {
+    "pingdom-to-graphite": "./bin/cli.js"
+  },
+  "scripts": {
+    "lint": "eslint lib bin --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "bluebird": "^3.7.2",
+    "chalk": "^4.0.0",
+    "cli-table3": "^0.6.0",
+    "commander": "^5.0.0",
+    "fs-extra": "^9.0.0",
+    "got": "^10.7.0",
+    "js-yaml": "^3.13.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.2"
+  }
+}

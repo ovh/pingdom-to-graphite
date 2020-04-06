@@ -1,0 +1,20 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "max-len": "off",
+    "no-underscore-dangle": "off",
+    "no-param-reassign": "off",
+    "no-return-await": "off",
+    "camelcase": "off"
+  },
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": false
+    }
+  }
+}
