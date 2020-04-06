@@ -96,6 +96,10 @@ To get the status of the Checks and the TMs (up/down) for NOW (only) - the curre
 
 This app is based on the work from lewg: https://github.com/lewg/pingdom-to-graphite.
 
+## Related
+
+- [pingdom-configurator](https://github.com/ovh/pingdom-configurator) - Configure Pingdom as described in the config file
+
 ## License
 
 [BSD-3-Clause](LICENSE) © OVH SAS
