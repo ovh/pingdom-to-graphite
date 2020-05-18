@@ -50,6 +50,7 @@ graphite:
   hostname: XXX               # Your Graphite hostname
   auth: 'u:XXX'               # Your Graphite auth (user:token)
   prefix: XXX                 # (optional, default="pingdom") Your Graphite prefix
+  concurrency: XXX            # (optional, default=5) Count of Graphite requests to do in parallel
 ```
 
 You can create your config file in **JSON** or **YAML** format.
