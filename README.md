@@ -27,12 +27,6 @@ $ pingdom-to-graphite --help
     updateCurrentStatus [options]  Get the status of the Checks and the TMs (up/down) for NOW (only), and push them to Graphite.
 ```
 
-### Example
-
-```bash
-$ pingdom-to-graphite list --config="/path/to/config/file"
-```
-
 ## Configuration
 
 Create a config file with the following configuration:
@@ -46,6 +40,7 @@ pingdom:
   accountEmail: 'XXX'         # Your Pingdom accountEmail (@todo to remove when Pingdom have migrated its API)
   regex: '.*'                 # (optional) use this regex to filter the list
   tags: []                    # (optional) Array of tags, to filter the list
+  concurrency: XXX            # (optional, default=5) Count of Pingdom requests to do in parallel
 graphite:
   hostname: XXX               # Your Graphite hostname
   auth: 'u:XXX'               # Your Graphite auth (user:token)
@@ -92,6 +87,29 @@ $ pingdom-to-graphite updateCurrentStatus --config="/path/to/config/file"
 ```
 
 To get the status of the Checks and the TMs (up/down) for NOW (only) - the current datas, and push them to Graphite.
+
+## Graphite datas pushed
+
+The datas (depending of your config) pushed to Graphite are:
+
+For `update`:
+
+```
+checks.results.${check_name}.${check_region}.status.${check_probe_country}.${check_probe_city}          # (if not --summary)
+checks.results.${check_name}.${check_region}.responsetime.${check_probe_country}.${check_probe_city}    # (if not --summary)
+checks.summary.outage.${check_name}.${check_region}.status
+checks.summary.performance.${check_name}.${check_region}.avgresponse
+tms.summary.outage.${tm_name}.${tm_kitchen}.status
+tms.summary.performance.${tm_name}.${tm_kitchen}.avgresponse
+```
+
+For `updateCurrentStatus`:
+
+```
+checks.${check_name}.${check_region}.status
+checks.${check_name}.${check_region}.lastresponsetime
+tms.${tm_name}.${tm_kitchen}.status
+```
 
 ## Credits
 

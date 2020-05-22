@@ -1,6 +1,6 @@
 {
   "name": "pingdom-to-graphite",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "description": "A tool for copying metrics from Pingdom to Graphite.",
   "repository": {
@@ -22,16 +22,16 @@
     "chalk": "^4.0.0",
     "cli-progress": "^3.8.2",
     "cli-table3": "^0.6.0",
-    "commander": "^5.0.0",
+    "commander": "^5.1.0",
     "fs-extra": "^9.0.0",
-    "got": "^10.7.0",
+    "got": "^11.1.4",
     "js-yaml": "^3.13.1",
     "lodash": "^4.17.15",
-    "moment": "^2.24.0",
+    "moment": "^2.26.0",
     "winston": "^3.2.1"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
+    "eslint": "^7.0.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-plugin-import": "^2.20.2"
   }
