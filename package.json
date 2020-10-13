@@ -1,6 +1,6 @@
 {
   "name": "pingdom-to-graphite",
-  "version": "2.0.0",
+  "version": "0.0.0",
   "private": true,
   "description": "A tool for copying metrics from Pingdom to Graphite.",
   "repository": {
@@ -13,26 +13,26 @@
     "pingdom-to-graphite": "./bin/cli.js"
   },
   "scripts": {
-    "lint": "eslint lib bin --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint lib bin",
+    "test": "npm run lint"
   },
   "dependencies": {
     "@hapi/joi": "^17.1.1",
     "bluebird": "^3.7.2",
-    "chalk": "^4.0.0",
+    "chalk": "^4.1.0",
     "cli-progress": "^3.8.2",
     "cli-table3": "^0.6.0",
-    "commander": "^5.1.0",
-    "fs-extra": "^9.0.0",
-    "got": "^11.1.4",
-    "js-yaml": "^3.13.1",
-    "lodash": "^4.17.19",
-    "moment": "^2.26.0",
-    "winston": "^3.2.1"
+    "commander": "^6.1.0",
+    "fs-extra": "^9.0.1",
+    "got": "^11.7.0",
+    "js-yaml": "^3.14.0",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
-    "eslint": "^7.0.0",
-    "eslint-config-airbnb": "^18.1.0",
-    "eslint-plugin-import": "^2.20.2"
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.1"
   }
 }
